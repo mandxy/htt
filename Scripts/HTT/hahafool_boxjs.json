@@ -1,0 +1,18 @@
+{
+  "id": "hahahrfool.app.sub",
+  "name": "hahahrfool 应用订阅",
+  "author": "@hahahrfool",
+  "icon": "",
+  "repo": "https://github.com/hahahrfool/htt",
+  "apps": [{
+    "id": "hahahrfoolhtt",
+    "name": "惠头条",
+    "keys": ["htt_videonameA", "htt_dongfangnameA", "htt_smvideonameA", "htt_signurlcknameA", "htt_signurlcknameA"],
+    "author": "@hahahrfool",
+    "settings": [
+    ],
+    "repo": "https://github.com/hahahrfool/htt/blob/master/Scripts/HTT/htt_ac.js",
+    "icons": ["https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.jpg", "https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.jpg"],
+    "script": "https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js"
+  }]
+}
