@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        htt_videoname: ${{ secrets.htt_videoname }}
-        htt_dongfangname: ${{ secrets.htt_dongfangname }}
-        htt_smvideoname: ${{ secrets.htt_smvideoname }}
-        htt_signurlckname: ${{ secrets.htt_signurlckname }}
-        htt_signbdname: ${{ secrets.htt_signbdname }}
+        HTT_VIDEONAME: ${{ secrets.HTT_VIDEONAME }}
+        HTT_DONGFANGNAME: ${{ secrets.HTT_DONGFANGNAME }}
+        HTT_SMVIDEONAME: ${{ secrets.HTT_SMVIDEONAME }}
+        HTT_SIGNURLCKNAME: ${{ secrets.HTT_SIGNURLCKNAME }}
+        HTT_SIGNBDNAME: ${{ secrets.HTT_SIGNBDNAME }}
         
     steps:
       - name: Checkout
