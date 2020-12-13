@@ -7,7 +7,7 @@
   "apps": [{
     "id": "hahahrfoolhtt",
     "name": "惠头条",
-    "keys": ["htt_videonameA", "htt_dongfangnameA", "htt_smvideonameA", "htt_signurlcknameA", "htt_signurlcknameA"],
+    "keys": ["htt_videonameA", "htt_dongfangnameA", "htt_smvideonameA", "htt_signurlcknameA", "htt_signbdnameA"],
     "author": "@hahahrfool",
     "settings": [
     ],
