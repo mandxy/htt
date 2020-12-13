@@ -16,19 +16,19 @@ const huitoutiao = "惠头条";
 
 //const htt_videoname = "htt_videoname" + httid;
 
-const htt_video = process.env.htt_videoname
+const htt_video = process.env.HTT_VIDEONAME
 
 //const htt_dongfangname = "htt_dongfangname" + httid;
-const htt_dongfang =process.env.htt_dongfangname
+const htt_dongfang =process.env.HTT_DONGFANGNAME
 
 //const htt_smvideoname = "htt_smvideoname" + httid;
-const htt_smvideo = process.env.htt_smvideoname
+const htt_smvideo = process.env.HTT_SMVIDEONAME
 
 //const htt_signurlckname = "htt_signurlckname" + httid;
-const htt_signurlck = process.env.htt_signurlckname
+const htt_signurlck = process.env.HTT_SIGNURLCKNAME
 
 //const htt_signbdname = "htt_signbdname" + httid;
-const htt_signbd = process.env.htt_signbdname
+const htt_signbd = process.env.HTT_SIGNBDNAME
 
 var htt_num = 0;
 var htt_result = "";
