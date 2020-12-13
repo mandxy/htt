@@ -59,6 +59,13 @@ function htt_read_dongfang() {
   };
 
   $.post(llUrl1, function (error, response, data) {
+    
+    if(error!=null)
+    {
+     console.log("error "+error)
+      return
+    }
+    
     if (log == 1) console.log("阅读" + data);
     var obj = JSON.parse(data);
 
@@ -100,6 +107,12 @@ function htt_read_video() {
   };
 
   $.post(llUrl1, function (error, response, data) {
+     if(error!=null)
+    {
+     console.log("error "+error)
+      return
+    }
+    
     if (log == 1) console.log("视频" + data);
     var obj = JSON.parse(data);
 
@@ -143,7 +156,6 @@ function htt_read_smvideo() {   //hahahrfool: since it's the last one called, we
 
     if(error != null){
         console.log("htt error: "+error);
-        $done()
         return;
     }
 
@@ -172,9 +184,6 @@ function htt_read_smvideo() {   //hahahrfool: since it's the last one called, we
 
     
     htt_msg(result1 + "\n" + result2 + "\n");
-
-
-    $done()
 
   });
 }
