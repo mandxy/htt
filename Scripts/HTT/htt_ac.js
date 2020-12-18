@@ -55,7 +55,7 @@ function htt_read_dongfang() {
         "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
     },
     body: htt_find(htt_dongfang),
-    timeout: 60,
+    timeout: 1000,
   };
 
   $.post(llUrl1, function (error, response, data) {
@@ -149,7 +149,7 @@ function htt_read_smvideo() {   //hahahrfool: since it's the last one called, we
         "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
     },
     body: htt_find(htt_smvideo),
-    timeout: 60,
+    timeout: 1000,
   };
 
   $.post(llUrl1, function (error, response, data) {
@@ -201,7 +201,7 @@ function htt_readtotal() {
         "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
     },
     body: htt_signbd,
-    timeout: 60,
+    timeout: 1000,
   };
 
   $.post(llUrl1, function (error, response, data) {
