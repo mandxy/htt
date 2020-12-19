@@ -103,7 +103,7 @@ function htt_read_video() {
         "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
     },
     body: htt_find(htt_video),
-    timeout: 60,
+    timeout: 1000,
   };
 
   $.post(llUrl1, function (error, response, data) {
