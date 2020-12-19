@@ -14,11 +14,22 @@ const huitoutiao = "惠头条";
 
 //++++++++++++++++++++++++++++++++-
 
-const htt_video = "{\"versionName\":\"4.3.0\",\"token\":\"1607501069164\",\"platform\":1,\"count\":0,\"userId\":150458445,\"multiple\":false,\"channel\":\"video\",\"duration\":30,\"appVersion\":1039,\"loginId\":\"26104a41fec647b2a985f747c0aa5821\"}"
-const htt_dongfang ="{\"versionName\":\"4.3.0\",\"platform\":1,\"count\":1,\"userId\":150458445,\"multiple\":false,\"channel\":\"dongfang\",\"duration\":30,\"appVersion\":1039,\"loginId\":\"26104a41fec647b2a985f747c0aa5821\",\"readActionInfo\":{\"maxHistorySize\":0,\"toolTypes\":[0],\"moveAvgPressure\":0.48656830191612244,\"downCount\":16,\"monkey\":false,\"moveCount\":1252,\"downAvgPressure\":0.0010416629957035184}}"
-const htt_smvideo = "{\"versionName\":\"4.3.0\",\"token\":\"1607501130790\",\"platform\":1,\"count\":0,\"userId\":150458445,\"multiple\":false,\"channel\":\"self_smallvideo\",\"duration\":30,\"appVersion\":1039,\"loginId\":\"26104a41fec647b2a985f747c0aa5821\"}"
-const htt_signurlck = "userId=150458445&loginId=26104a41fec647b2a985f747c0aa5821&appVersion=1039&platform=1&versionName=4.3.0"
-const htt_signbd = "{\"loginId\":\"26104a41fec647b2a985f747c0aa5821\",\"versionName\":\"4.3.0\",\"userId\":150458445,\"appVersion\":1039,\"platform\":1}"
+
+const htt_video = process.env.HTT_VIDEONAME
+
+//const htt_dongfangname = "htt_dongfangname" + httid;
+const htt_dongfang =process.env.HTT_DONGFANGNAME
+
+//const htt_smvideoname = "htt_smvideoname" + httid;
+const htt_smvideo = process.env.HTT_SMVIDEONAME
+
+//const htt_signurlckname = "htt_signurlckname" + httid;
+const htt_signurlck = process.env.HTT_SIGNURLCKNAME
+
+//const htt_signbdname = "htt_signbdname" + httid;
+const htt_signbd = process.env.HTT_SIGNBDNAME
+
+
 
 var htt_num = 0;
 var htt_result = "";
@@ -49,6 +60,13 @@ function htt_read_dongfang() {
   };
 
   $.post(llUrl1, function (error, response, data) {
+    
+    if(error!=null)
+    {
+     console.log("error "+error)
+      return
+    }
+    
     if (log == 1) console.log("阅读" + data);
     var obj = JSON.parse(data);
 
@@ -90,6 +108,12 @@ function htt_read_video() {
   };
 
   $.post(llUrl1, function (error, response, data) {
+     if(error!=null)
+    {
+     console.log("error "+error)
+      return
+    }
+    
     if (log == 1) console.log("视频" + data);
     var obj = JSON.parse(data);
 
@@ -133,7 +157,6 @@ function htt_read_smvideo() {   //hahahrfool: since it's the last one called, we
 
     if(error != null){
         console.log("htt error: "+error);
-        $done()
         return;
     }
 
@@ -162,9 +185,6 @@ function htt_read_smvideo() {   //hahahrfool: since it's the last one called, we
 
     
     htt_msg(result1 + "\n" + result2 + "\n");
-
-
-    $done()
 
   });
 }
